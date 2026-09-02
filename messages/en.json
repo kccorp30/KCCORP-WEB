@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "services": "Services",
+    "projects": "Projects",
+    "technology": "Technology",
+    "about": "About",
+    "locations": "Locations",
+    "insights": "Insights",
+    "contact": "Contact",
+    "requestService": "Request Service"
+  }
+}

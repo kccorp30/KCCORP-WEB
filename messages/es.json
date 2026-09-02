@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "technology": "Tecnología",
+    "about": "Nosotros",
+    "locations": "Ubicaciones",
+    "insights": "Insights",
+    "contact": "Contacto",
+    "requestService": "Solicitar Servicio"
+  }
+}

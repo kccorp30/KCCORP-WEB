@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    /* v4: base navy casi negro, no marine-white — el sitio es oscuro por defecto,
+       coherente con Marine Cloud. marine-white ahora es el color de texto primario. */
+    @apply bg-navy text-marine-white font-body antialiased;
+  }
+  h1, h2, h3, .display {
+    @apply font-display uppercase tracking-tight;
+  }
+  /* Respeta prefers-reduced-motion en todo el sitio, no solo en Framer Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Sprint 6, accesibilidad: focus visible consistente en todo el
+     sitio — el dorado ya es el color de acento de marca, así que
+     usarlo también como anillo de foco no introduce un color nuevo. */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid #C9A24B;
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background: #C9A24B;
+    color: #070E18;
+    padding: 12px 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+  }
+  .skip-link:focus {
+    left: 12px;
+    top: 12px;
+  }
+}
